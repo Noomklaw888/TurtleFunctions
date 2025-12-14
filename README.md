@@ -1,2 +1,6 @@
 # TurtleFunctions
-my functions for python turtle
+My functions for python turtle.
+<hr>
+Demo.py when finished running:
+<hr>
+<img width="720" height="696" alt="Demo" src="https://github.com/user-attachments/assets/b82be495-4120-428c-80bb-ddd8b5888e69" />
