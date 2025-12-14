@@ -126,6 +126,7 @@ def bumpy(cize):
         curve(cize/3)
         tom.left(90)
     tom.end_fill()
+    tom.penup()
 
 '''while True:
     rewrite()
