@@ -100,7 +100,7 @@ def drawcubey():
     tom.penup()
     tom.goto(x,y)
     tom.color("black")
-    square(2)
+    tom.stamp()
     tom.pendown
     tom.penup()
 
