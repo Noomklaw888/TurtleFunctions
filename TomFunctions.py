@@ -50,8 +50,8 @@ def curve(curvesize):
     for i in range(45):
         tom.right(4)
         tom.forward(4 * curvesize)
-def thick(no):
-    tom.width(no)
+def thick(width):
+    tom.width(width)
 def drawstars(cize):
     tom.pendown()
     points = (random.randint(2, 3) * 2) + 1
@@ -109,12 +109,13 @@ def circle(cize):
     tom.begin_fill()
     tom.circle(cize*25)
     tom.end_fill()
+    tom.penup()
 
 def triangle(cize):
     tom.pendown()
     tom.begin_fill()
     for i in range(3):
-        tom.right(60)
+        tom.right(120)
         tom.forward(cize*25)
     tom.end_fill()
     tom.penup()
@@ -128,15 +129,52 @@ def bumpy(cize):
     tom.end_fill()
     tom.penup()
 
-'''while True:
-    rewrite()
-    size = random.randint(5, 10)/20
-    tom.width(5)
-    drawhearts()
-    size = random.randint(5, 10)/10
-    tom.width(10 * size)
-    drawstars()
-    size = random.randint(2, 8)
-    circlespiral()
-'''
+def snowman():
+    #body
+    thick(5)
+    tom.fillcolor("white")
+    circle(3)
+    tom.goto(tom.xcor(),tom.ycor() + 150)
+    circle(2)
+    tom.goto(tom.xcor(),tom.ycor() + 100)
+    circle(1)
+    tom.goto(tom.xcor(),tom.ycor() + 35)
+    #nose
+    tom.color("orange")
+    tom.setheading(90)
+    triangle(1)
+    #arms
+    tom.color("brown")
+    tom.goto(tom.xcor()+50,tom.ycor() - 85)
+    tom.setheading(0)
+    tom.pendown()
+    tom.forward(50)
+    tom.penup()
+    tom.goto(tom.xcor()-200,tom.ycor())
+    tom.pendown()
+    tom.forward(50)
 
+def fibonacci():
+    tom.fillcolor("blue")
+    tom.begin_fill()
+    square(1/2)
+    tom.left(90)
+    square(1/2)
+    tom.left(90)
+    tom.forward(50/2)
+    square(2/2)
+    tom.left(90)
+    tom.forward(50/2)
+    square(3/2)
+    tom.left(90)
+    tom.forward(100/2)
+    square(5/2)
+    tom.left(90)
+    tom.forward(150/2)
+    square(8/2)
+    tom.left(90)
+    tom.forward(250/2)
+    square(13/2)
+    tom.left(90)
+    tom.forward(400/2)
+    square(21/2)
