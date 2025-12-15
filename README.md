@@ -1,5 +1,6 @@
 # TurtleFunctions
 My functions for python turtle.
+To use normal turtle write t.tom.function(parameters)
 <hr>
 Demo.py when finished running:
 <hr>
