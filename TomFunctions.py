@@ -7,7 +7,7 @@ tom.colormode(225)
 
 tom.shape("turtle")#make tom a turtle and not an arrow
 tom.shapesize(2, 2, 4) # Make tom bigger
-col = ['red', 'purple', 'yellow', 'orange', 'green', 'blue', 'pink']
+col = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink']
 def move(x,y):
     tom.penup()
     tom.goto(x, y)
@@ -17,11 +17,11 @@ def speed():
 def color():
     tom.fillcolor(col[random.randint(0, 6)])
     tom.width(5)
-def circlespiral(cize):
+def circlespiral(cize, rings=18):
     tom.penup()
     tom.pendown()
     tom.begin_fill()
-    for i in range (18):
+    for i in range (rings):
         tom.right(20)
         tom.circle(i*cize)
     tom.end_fill()
@@ -203,15 +203,8 @@ def tree(height=10, width=3):
     tom.fillcolor("green")
     circle(width/2)
     tom.end_fill()
-    '''while True:
-    rewrite()
-    size = random.randint(5, 10)/20
-    tom.width(5)
-    drawhearts()
-    size = random.randint(5, 10)/10
-    tom.width(10 * size)
-    drawstars()
-    size = random.randint(2, 8)
-    circlespiral()
-'''
-
+def invis(ivis=0):
+    if invis == 0:
+        tom.showturtle()
+    else:
+        tom.hideturtle()
