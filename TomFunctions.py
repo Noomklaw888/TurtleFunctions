@@ -73,7 +73,6 @@ tomtext = "qwerg"
 def rewrite(col, text):
     tom.pencolor(f'{col}')
     tom.penup()
-    tom.goto(0, 0)
     tom.pendown()
     tom.write(text, align="Center", font=("Arial", 40, "normal"))
     tom.pencolor('black')
