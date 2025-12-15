@@ -187,6 +187,22 @@ def fibonacci():
     tom.left(90)
     tom.forward(400/2)
     square(21/2)
+
+def tree(height=10, width=3):
+    tom.fillcolor("brown")
+    tom.begin_fill()
+    tom.setheading(0)
+    for i in range(2):
+        tom.forward(width*10)
+        tom.left(90)
+        tom.forward(height*10)
+        tom.left(90)
+    tom.end_fill()
+    move(tom.xcor()+(width*5),tom.ycor()+(height*10))
+    tom.begin_fill()
+    tom.fillcolor("green")
+    circle(width/2)
+    tom.end_fill()
     '''while True:
     rewrite()
     size = random.randint(5, 10)/20
@@ -198,8 +214,4 @@ def fibonacci():
     size = random.randint(2, 8)
     circlespiral()
 '''
-for i in range(11):
-    tom.goto(-300 + (i * 50),0)
-    snowman(10-i)
 
-tom.hideturtle()
