@@ -11,7 +11,7 @@ col = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink']
 def move(x,y):
     tom.penup()
     tom.goto(x, y)
-    tom.pendown()
+    tom.pendown()#moves without drawing
 def speed():
     tom.speed("fastest")
 def color():
@@ -69,11 +69,8 @@ def drawstars(cize):
         tom.forward(100 * cize/5)
     tom.end_fill()
     tom.penup()
-tomtext = "qwerg"
 def rewrite(col, text):
     tom.pencolor(f'{col}')
-    tom.penup()
-    tom.pendown()
     tom.write(text, align="Center", font=("Arial", 40, "normal"))
     tom.pencolor('black')
 def square(cize):
@@ -89,7 +86,6 @@ def drawcubey():
     tom.penup()
     x = tom.xcor()
     y = tom.ycor()
-    tom.penup()
     tom.goto(x+50,y+50)
     tom.setheading(0)
     tom.pendown()
@@ -124,6 +120,7 @@ def triangle(cize):
     tom.penup()
 
 def bumpy(cize):
+    '''makes a bumpy shape'''
     tom.pendown()
     tom.begin_fill()
     for i in range(4):
@@ -163,6 +160,7 @@ def snowman(height=h):
     tom.color("black")
 
 def fibonacci():
+    '''draws a fibonacci square spiral'''
     tom.fillcolor("blue")
     tom.begin_fill()
     square(1/2)
