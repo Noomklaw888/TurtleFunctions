@@ -7,7 +7,11 @@ tom.colormode(225)
 
 tom.shape("turtle")#make tom a turtle and not an arrow
 tom.shapesize(2, 2, 4) # Make tom bigger
-col = ['red', 'purple', 'yellow', 'orange', 'green', 'blue', 'pink'] 
+col = ['red', 'purple', 'yellow', 'orange', 'green', 'blue', 'pink']
+def move(x,y):
+    tom.penup()
+    tom.goto(x, y)
+    tom.pendown()
 def speed():
     tom.speed("fastest")
 def color():
@@ -128,15 +132,18 @@ def bumpy(cize):
         tom.left(90)
     tom.end_fill()
     tom.penup()
-
-def snowman():
+h=1
+def snowman(height=h):
+    '''height will default to a random nuber between 6 and 10.'''
+    global h
+    h=random.randint(6,10)
     #body
     thick(5)
     tom.fillcolor("white")
     circle(3)
-    tom.goto(tom.xcor(),tom.ycor() + 150)
+    tom.goto(tom.xcor(),tom.ycor() + (15*height))
     circle(2)
-    tom.goto(tom.xcor(),tom.ycor() + 100)
+    tom.goto(tom.xcor(),tom.ycor() + (10*height))
     circle(1)
     tom.goto(tom.xcor(),tom.ycor() + 35)
     #nose
@@ -145,7 +152,7 @@ def snowman():
     triangle(1)
     #arms
     tom.color("brown")
-    tom.goto(tom.xcor()+50,tom.ycor() - 85)
+    tom.goto(tom.xcor()+50,tom.ycor() - (8.5*height))
     tom.setheading(0)
     tom.pendown()
     tom.forward(50)
@@ -153,6 +160,8 @@ def snowman():
     tom.goto(tom.xcor()-200,tom.ycor())
     tom.pendown()
     tom.forward(50)
+    tom.penup()
+    tom.color("black")
 
 def fibonacci():
     tom.fillcolor("blue")
@@ -178,3 +187,19 @@ def fibonacci():
     tom.left(90)
     tom.forward(400/2)
     square(21/2)
+    '''while True:
+    rewrite()
+    size = random.randint(5, 10)/20
+    tom.width(5)
+    drawhearts()
+    size = random.randint(5, 10)/10
+    tom.width(10 * size)
+    drawstars()
+    size = random.randint(2, 8)
+    circlespiral()
+'''
+for i in range(11):
+    tom.goto(-300 + (i * 50),0)
+    snowman(10-i)
+
+tom.hideturtle()
