@@ -1,5 +1,5 @@
 import random
-import TomFunctions as t
+import TomFunctions as t #If you import as t, you can write t.tom.function(parameters) instead of TomFunctions.tom.blah(blahblahblah)
 t.thick(10)
 t.speed()
 
