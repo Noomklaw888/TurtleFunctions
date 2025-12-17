@@ -128,9 +128,8 @@ def bumpy(cize):
         tom.left(90)
     tom.end_fill()
     tom.penup()
-h=1
+h=10
 def snowman(height=h):
-    '''height will default to a random nuber between 6 and 10.'''
     global h
     h=random.randint(6,10)
     #body
