@@ -34,21 +34,20 @@ def randompos():
     tom.pendown()
 def drawhearts(cize):
     tom.pendown()
-    tom.setheading(0)#point east
     tom.penup()
-    tom.fillcolor(col[random.randint(0, 6)])#set Tom's color
     tom.begin_fill()#start filling
     tom.pendown()
-    tom.left(125)
-    tom.forward(205 * cize/5)
-    tom.right(35)
-    curve(cize/5)
+    tom.left(55)
+    tom.forward(70 * cize)
+    tom.left(35)
+    tom.circle(20*cize,extent=180)
     tom.left(180)
-    curve(cize/5)
-    tom.right(35)
-    tom.forward(195 * cize/5)
+    tom.circle(20*cize,extent=180)
+    tom.left(35)
+    tom.forward(70 * cize)
     tom.end_fill()#end filling
     tom.penup()
+
     
 def curve(curvesize):
     for i in range(45):
@@ -59,7 +58,6 @@ def thick(width):
 def drawstars(cize):
     tom.pendown()
     points = (random.randint(2, 3) * 2) + 1
-    tom.setheading(0)#point east
     tom.penup()
     tom.begin_fill()#start filling
     tom.pendown()
@@ -107,6 +105,7 @@ def circle(cize):
     tom.pendown()
     tom.begin_fill()
     tom.circle(cize*25)
+    tom.circle
     tom.end_fill()
     tom.penup()
 
@@ -124,14 +123,14 @@ def bumpy(cize):
     tom.pendown()
     tom.begin_fill()
     for i in range(4):
-        curve(cize/3)
-        tom.left(90)
+        tom.circle(cize*20, extent=180)
+        tom.right(90)
     tom.end_fill()
     tom.penup()
 h=10
 def snowman(height=h):
     global h
-    h=random.randint(6,10)
+    h = random.randint(6,10)
     #body
     thick(5)
     tom.fillcolor("white")
@@ -204,3 +203,4 @@ def invis(ivis=0):
         tom.showturtle()
     else:
         tom.hideturtle()
+
