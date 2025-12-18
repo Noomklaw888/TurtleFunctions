@@ -1,3 +1,4 @@
+#Note: If you run this file alone you can use it as a sandbox by typing commands in shell
 import turtle as tom
 import random
 
