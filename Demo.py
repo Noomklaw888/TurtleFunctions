@@ -1,5 +1,5 @@
 import random
-import TomFunctions as t #If you import as t, you can write t.tom.function(parameters) instead of TomFunctions.tom.blah(blahblahblah)
+import TomFunctions as t
 t.thick(10)
 t.speed()
 
@@ -9,6 +9,7 @@ for i in range (5):
     t.square(random.randint(1,5))#square fuction makes a square
     t.randompos()
     t.color()
+    t.tom.setheading(0)
     t.drawhearts(random.randint(1,5))#drawhearts makes a heart
     t.randompos()
     t.color()
@@ -19,6 +20,7 @@ for i in range (5):
     t.randompos()
     t.color()
     t.bumpy(random.randint(1,5))#bumpy makes a bumpy shape
+    
 t.tom.goto(0,0)
 t.drawcubey()#cubey is cool!
 tomtext='Hello World!'
@@ -27,5 +29,6 @@ t.tom.right(90)
 t.thick(10)#line width
 
 #t.curve(40)makes the arc of a half circle
+t.move(-200,0)
 
-t.tom.hideturtle()
+
